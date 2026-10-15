@@ -1,0 +1,75 @@
+@use 'tokens' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+
+.story__header {
+  padding-block: $space-6 $space-4;
+}
+
+.story__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-3;
+  color: $color-text-muted;
+}
+
+.story__lede {
+  font-size: $step-1;
+  max-width: $prose-max;
+}
+
+.story-media {
+  margin: 0 0 $space-6;
+  padding: 0;
+
+  .story-media__player {
+    width: 100%;
+    background: #000;
+    border-radius: $radius;
+  }
+
+  .story-media__caption {
+    margin-block-start: $space-2;
+    color: $color-text-muted;
+    font-size: $step-0 * 0.875;
+  }
+}
+
+.story__content {
+  max-width: $prose-max;
+}
+
+// --- Transcript --------------------------------------------------------
+.transcript {
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: $space-4;
+  background: $color-surface;
+
+  &__panel {
+    summary {
+      cursor: pointer;
+      font-weight: $weight-bold;
+      padding: $space-2 0;
+      &:focus-visible { outline: 3px solid $color-focus; outline-offset: 2px; }
+    }
+  }
+
+  &__body {
+    padding-block-start: $space-3;
+  }
+
+  &__timestamp {
+    font-family: $font-mono;
+    color: $color-text-muted;
+    margin-inline-end: $space-2;
+  }
+
+  &__note {
+    font-size: $step-0 * 0.875;
+    color: $color-text-muted;
+    margin-block: $space-3 0;
+  }
+}

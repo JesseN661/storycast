@@ -1,0 +1,84 @@
+@use 'spacing' as *;
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.site-header {
+  background: $color-surface;
+  border-block-end: 1px solid $color-border;
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 50;
+}
+
+.site-header__inner {
+  width: min(100% - #{$space-5}, #{$container-max});
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+  padding-block: $space-3;
+}
+
+.site-logo {
+  font-size: $step-2;
+  font-weight: $weight-bold;
+  color: $color-text;
+  text-decoration: none;
+  &:hover { color: $color-accent; }
+}
+
+// Hamburger button (JS toggles aria-expanded)
+.nav-toggle {
+  display: none;
+  font: inherit;
+  font-weight: $weight-bold;
+  padding: $space-2 $space-3;
+  background: $color-surface;
+  color: $color-text;
+  border: 2px solid $color-border;
+  border-radius: $radius;
+  cursor: pointer;
+  &:hover { border-color: $color-accent; }
+}
+
+.site-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+
+  a {
+    display: block;
+    padding: $space-2;
+    color: $color-text;
+    text-decoration: none;
+    font-weight: $weight-regular;
+    border-radius: $radius;
+    &:hover { color: $color-accent; text-decoration: underline; }
+    &[aria-current="page"] {
+      font-weight: $weight-bold;
+      box-shadow: inset 0 -3px 0 0 $color-accent;
+    }
+  }
+}
+
+// Mobile: nav collapses behind the toggle (revealed via [hidden] JS-free fallback keeps it visible)
+@media (max-width: #{$bp-md - 0.001rem}) {
+  .nav-toggle { display: block; }
+
+  .site-nav[data-open="false"] { display: none; }
+
+  .site-nav__list {
+    flex-direction: column;
+    width: 100%;
+    gap: $space-1;
+    padding-block-start: $space-2;
+    border-block-start: 1px solid $color-border;
+  }
+}

@@ -1,0 +1,81 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'tokens' as *;
+@use 'spacing' as *;
+@use 'mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-stack;
+  font-size: $step-0;
+  line-height: $leading-body;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+h1, h2, h3, h4 {
+  line-height: $leading-tight;
+  font-weight: $weight-bold;
+  margin-block-end: $space-3;
+}
+
+h1 { font-size: clamp(#{$step-4}, 5vw, #{$step-5}); }
+h2 { font-size: $step-3; }
+h3 { font-size: $step-2; }
+
+p { margin-block: 0 $space-3; }
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: $color-accent;
+  &:hover { color: $color-accent-hover; }
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+// Skip link: hidden until focused
+.skip-link {
+  position: absolute;
+  inset-block-start: $space-2;
+  inset-inline-start: $space-2;
+  z-index: 100;
+  padding: $space-2 $space-3;
+  background: $color-surface;
+  color: $color-text;
+  font-weight: $weight-bold;
+  border: 2px solid $color-focus;
+  border-radius: $radius;
+  transform: translateY(-200%);
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

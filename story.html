@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StoryCast story detail — watch or listen, and read the full transcript.">
+  <title>Story title — StoryCast</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="StoryCast home">StoryCast</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="primary-nav" data-open="false" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="story.html" aria-current="page">Stories</a></li>
+          <li><a href="about.html">About &amp; Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="story" aria-labelledby="story-heading">
+      <header class="story__header container">
+        <h1 id="story-heading">Placeholder story title</h1>
+        <p class="story__meta">
+          <span class="badge badge--video">Video · 6 min</span>
+          <span class="story__byline">By Author Name</span>
+          <time datetime="2026-10-01">October 1, 2026</time>
+        </p>
+        <p class="story__lede">Standfirst paragraph: a two-sentence summary of the story.</p>
+      </header>
+
+      <div class="container">
+        <figure class="story-media">
+          <!-- Video example: replace src/poster/track with your own media -->
+          <video class="story-media__player" controls preload="metadata" poster="img/placeholder.svg">
+            <source src="media/story-1.mp4" type="video/mp4">
+            <track kind="captions" src="media/story-1.vtt" srclang="en" label="English" default>
+            Your browser does not support the video element.
+            <a href="media/story-1.mp4">Download the video file</a>.
+          </video>
+
+          <!-- Audio example (uncomment for audio-only stories)
+          <audio class="story-media__player" controls preload="none">
+            <source src="media/story-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            <a href="media/story-1.mp3">Download the audio file</a>.
+          </audio>
+          -->
+
+          <figcaption class="story-media__caption">
+            Description of the media: what is shown or said, for users who
+            cannot perceive it directly.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="container story__content">
+        <section class="transcript" aria-labelledby="transcript-heading">
+          <h2 id="transcript-heading">Transcript</h2>
+          <details class="transcript__panel">
+            <summary>Read the full transcript</summary>
+            <div class="transcript__body">
+              <p><span class="transcript__timestamp">00:00</span> Speaker: Placeholder transcript line…</p>
+              <p><span class="transcript__timestamp">00:12</span> Speaker: Placeholder transcript line…</p>
+            </div>
+          </details>
+          <p class="transcript__note">
+            Captions are available in the player. A plain-text version of the
+            transcript is provided above.
+          </p>
+        </section>
+      </div>
+    </article>
+
+    <section class="related" aria-labelledby="related-heading">
+      <div class="container">
+        <h2 id="related-heading">Related stories</h2>
+        <ul class="story-grid story-grid--related">
+          <li>
+            <article class="media-card">
+              <div class="media-card__inner">
+                <figure class="media-card__figure">
+                  <img src="img/placeholder.svg" alt="Placeholder thumbnail for a related story." width="640" height="360">
+                </figure>
+                <div class="media-card__body">
+                  <p class="media-card__meta">
+                    <span class="badge badge--audio">Audio · 9 min</span>
+                  </p>
+                  <h3 class="media-card__title">
+                    <a href="story.html">Placeholder related story</a>
+                  </h3>
+                  <p class="media-card__summary">One-sentence summary.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="media-card">
+              <div class="media-card__inner">
+                <figure class="media-card__figure">
+                  <img src="img/placeholder.svg" alt="Placeholder thumbnail for a related story." width="640" height="360">
+                </figure>
+                <div class="media-card__body">
+                  <p class="media-card__meta">
+                    <span class="badge badge--video">Video · 4 min</span>
+                  </p>
+                  <h3 class="media-card__title">
+                    <a href="story.html">Placeholder related story</a>
+                  </h3>
+                  <p class="media-card__summary">One-sentence summary.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <nav aria-label="Footer">
+        <ul class="site-footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="story.html">Stories</a></li>
+          <li><a href="about.html">About &amp; Access</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__note">&copy; 2026 StoryCast. All stories accessible by design.</p>
+    </div>
+  </footer>
+</body>
+</html>

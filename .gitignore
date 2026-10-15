@@ -1,0 +1,10 @@
+# Dependencies (if you ever add any)
+node_modules/
+
+# Sass source maps (generateMap is off, but just in case)
+*.css.map
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+*.log

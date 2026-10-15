@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StoryCast — accessible audio and video storytelling. Listen, watch, and read transcripts of every story.">
+  <title>StoryCast — Accessible Audio &amp; Video Storytelling</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="StoryCast home">StoryCast</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="primary-nav" data-open="false" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="story.html">Stories</a></li>
+          <li><a href="about.html">About &amp; Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">Stories you can hear, watch, and read</h1>
+        <p class="hero__lede">
+          StoryCast is a home for audio and video storytelling — every piece
+          captioned, transcribed, and built to work for everyone.
+        </p>
+        <a class="button" href="#featured-stories">Browse featured stories</a>
+      </div>
+    </section>
+
+    <section class="featured" id="featured-stories" aria-labelledby="featured-heading">
+      <div class="container">
+        <h2 id="featured-heading">Featured stories</h2>
+
+        <ul class="story-grid">
+          <li>
+            <article class="media-card">
+              <div class="media-card__inner">
+                <figure class="media-card__figure">
+                  <img src="img/placeholder.svg" alt="Placeholder thumbnail for the featured story." width="640" height="360">
+                </figure>
+                <div class="media-card__body">
+                  <p class="media-card__meta">
+                    <span class="badge badge--video">Video · 6 min</span>
+                  </p>
+                  <h3 class="media-card__title">
+                    <a href="story.html">Placeholder story title</a>
+                  </h3>
+                  <p class="media-card__summary">
+                    One-sentence summary of this story goes here.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="media-card">
+              <div class="media-card__inner">
+                <figure class="media-card__figure">
+                  <img src="img/placeholder.svg" alt="Placeholder thumbnail for the featured story." width="640" height="360">
+                </figure>
+                <div class="media-card__body">
+                  <p class="media-card__meta">
+                    <span class="badge badge--audio">Audio · 9 min</span>
+                  </p>
+                  <h3 class="media-card__title">
+                    <a href="story.html">Placeholder story title</a>
+                  </h3>
+                  <p class="media-card__summary">
+                    One-sentence summary of this story goes here.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="media-card">
+              <div class="media-card__inner">
+                <figure class="media-card__figure">
+                  <img src="img/placeholder.svg" alt="Placeholder thumbnail for the featured story." width="640" height="360">
+                </figure>
+                <div class="media-card__body">
+                  <p class="media-card__meta">
+                    <span class="badge badge--video">Video · 4 min</span>
+                  </p>
+                  <h3 class="media-card__title">
+                    <a href="story.html">Placeholder story title</a>
+                  </h3>
+                  <p class="media-card__summary">
+                    One-sentence summary of this story goes here.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="access-note" aria-labelledby="access-note-heading">
+      <div class="container">
+        <h2 id="access-note-heading">Built for every listener and viewer</h2>
+        <p>
+          Every story on StoryCast ships with captions or a full text
+          transcript. The site is keyboard-navigable and meets WCAG 2.1 AA.
+        </p>
+        <a class="button button--secondary" href="about.html">Read about our accessibility</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <nav aria-label="Footer">
+        <ul class="site-footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="story.html">Stories</a></li>
+          <li><a href="about.html">About &amp; Access</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__note">&copy; 2026 StoryCast. All stories accessible by design.</p>
+    </div>
+  </footer>
+</body>
+</html>

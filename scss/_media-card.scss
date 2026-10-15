@@ -1,0 +1,77 @@
+@use 'tokens' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+@use 'mixins' as *;
+
+// The media card is a CONTAINER-QUERIED component.
+// It changes layout based on ITS OWN width, not the viewport — so the same
+// component adapts whether it sits in a 3-col grid or a 1-col related strip.
+//
+// NOTE: a container query can style an element's DESCENDANTS, never the
+// container itself. That is why the flex row lives on .media-card__inner.
+.media-card {
+  container-type: inline-size;
+  container-name: card;
+
+  height: 100%;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  overflow: hidden;
+}
+
+.media-card__inner {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  height: 100%;
+}
+
+.media-card__figure {
+  margin: 0;
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: $color-surface-alt;
+  }
+}
+
+.media-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  padding: $space-3;
+}
+
+.media-card__meta { margin: 0; }
+.media-card__title {
+  margin: 0;
+  font-size: $step-2;
+  a {
+    color: $color-text;
+    text-decoration: none;
+    &:hover { color: $color-accent; text-decoration: underline; }
+  }
+}
+.media-card__summary {
+  margin: 0;
+  color: $color-text-muted;
+}
+
+// --- Container query: flip to a horizontal card when it has room -------
+@container card (min-width: 22rem) {
+  .media-card__inner {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .media-card__figure {
+    flex: 0 0 40%;
+    img { height: 100%; aspect-ratio: auto; }
+  }
+  .media-card__body {
+    flex: 1;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Placeholder image">
+  <rect width="640" height="360" fill="#e7ebf0"/>
+  <rect x="220" y="130" width="200" height="100" rx="8" fill="#c2ccd8"/>
+  <path d="M270 210l40-45 30 30 25-22 45 37z" fill="#94a3b8"/>
+  <circle cx="290" cy="160" r="14" fill="#f8fafc"/>
+  <text x="320" y="270" font-family="system-ui, sans-serif" font-size="20" fill="#64748b" text-anchor="middle">StoryCast</text>
+</svg>

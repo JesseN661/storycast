@@ -1,0 +1,167 @@
+@use 'tokens' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+@use 'mixins' as *;
+
+// --- Layout primitives -------------------------------------------------
+
+.container {
+  width: min(100% - #{$space-5}, #{$container-max});
+  margin-inline: auto;
+}
+
+.container--prose {
+  max-width: $prose-max;
+  width: min(100% - #{$space-5}, #{$prose-max});
+}
+
+main > section,
+.story,
+.related {
+  padding-block: $space-6;
+}
+
+// --- Story grid (CSS Grid, viewport breakpoints) -----------------------
+
+.story-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: $space-4;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.story-grid--related {
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// --- Buttons & badges (Flexbox) ---------------------------------------
+
+.button {
+  display: inline-block;
+  padding: $space-2 $space-4;
+  background: $color-accent;
+  color: $color-surface;
+  font-weight: $weight-bold;
+  text-decoration: none;
+  border: 2px solid $color-accent;
+  border-radius: $radius;
+  cursor: pointer;
+  &:hover {
+    background: $color-accent-hover;
+    border-color: $color-accent-hover;
+    color: $color-surface;
+  }
+}
+
+.button--secondary {
+  background: $color-surface;
+  color: $color-accent;
+}
+
+.badge {
+  display: inline-block;
+  padding: $space-1 $space-2;
+  border-radius: $radius;
+  font-size: $step-0 * 0.875;
+  font-weight: $weight-bold;
+}
+.badge--video {
+  background: $color-badge-video-bg;
+  color: $color-badge-video-fg;
+}
+.badge--audio {
+  background: $color-badge-audio-bg;
+  color: $color-badge-audio-fg;
+}
+
+// --- Hero & page header ------------------------------------------------
+
+.hero {
+  background: $color-surface-alt;
+  padding-block: $space-7;
+  .hero__lede {
+    font-size: $step-1;
+    max-width: $prose-max;
+    margin-block-end: $space-4;
+  }
+}
+
+.page-header {
+  padding-block: $space-6 $space-4;
+  .page-header__lede {
+    font-size: $step-1;
+    color: $color-text-muted;
+    max-width: $prose-max;
+  }
+}
+
+.access-note {
+  background: $color-surface-alt;
+}
+
+// --- Feature list (about page, Flexbox wrap) ---------------------------
+
+.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+
+  li {
+    flex: 1 1 16rem;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+    padding: $space-4;
+  }
+  h3 { margin-block-end: $space-2; }
+  p { margin: 0; color: $color-text-muted; }
+}
+
+// --- Contact form ------------------------------------------------------
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  margin-block-start: $space-4;
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+  }
+  label { font-weight: $weight-bold; }
+  input,
+  textarea {
+    font: inherit;
+    padding: $space-2;
+    border: 2px solid $color-border;
+    border-radius: $radius;
+    background: $color-surface;
+    color: $color-text;
+    &:focus-visible { @include focus-ring; }
+  }
+  .form-hint {
+    font-size: $step-0 * 0.875;
+    color: $color-text-muted;
+    margin: 0;
+  }
+}

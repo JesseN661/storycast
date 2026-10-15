@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About StoryCast — our mission, accessibility features, and how to engage with our stories.">
+  <title>About &amp; Access — StoryCast</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="StoryCast home">StoryCast</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <nav class="site-nav" id="primary-nav" data-open="false" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="story.html">Stories</a></li>
+          <li><a href="about.html" aria-current="page">About &amp; Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-header container">
+      <h1>About &amp; Access</h1>
+      <p class="page-header__lede">
+        StoryCast exists so that audio and video stories can reach everyone —
+        regardless of ability, device, or connection.
+      </p>
+    </header>
+
+    <section class="mission" aria-labelledby="mission-heading">
+      <div class="container container--prose">
+        <h2 id="mission-heading">Our mission</h2>
+        <p>Placeholder paragraph describing the mission of StoryCast.</p>
+        <p>Placeholder paragraph describing who the stories serve.</p>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading">Accessibility features</h2>
+        <ul class="feature-list">
+          <li>
+            <h3>Captions &amp; transcripts</h3>
+            <p>Every video ships with WebVTT captions; every story has a full text transcript.</p>
+          </li>
+          <li>
+            <h3>Keyboard navigation</h3>
+            <p>Full support for tabbing, with a skip link and visible focus indicators.</p>
+          </li>
+          <li>
+            <h3>Contrast &amp; readability</h3>
+            <p>All text meets or exceeds WCAG 2.1 AA contrast ratios (4.5:1 minimum).</p>
+          </li>
+          <li>
+            <h3>Reduced motion</h3>
+            <p>Animations respect your prefers-reduced-motion setting.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="engage" aria-labelledby="engage-heading">
+      <div class="container container--prose">
+        <h2 id="engage-heading">Get involved</h2>
+        <p>Placeholder: how users can pitch stories, give feedback, or request accessible formats.</p>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-hint">
+            <p class="form-hint" id="name-hint">Optional.</p>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hint">
+            <p class="form-hint" id="email-hint">We only use this to reply to you.</p>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="button" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <nav aria-label="Footer">
+        <ul class="site-footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="story.html">Stories</a></li>
+          <li><a href="about.html">About &amp; Access</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__note">&copy; 2026 StoryCast. All stories accessible by design.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+// Breakpoints & layout tokens (reference values, not colors/spacing)
+$bp-sm: 40rem;   // 640px  — 2-column grid
+$bp-md: 48rem;   // 768px  — nav switches to horizontal
+$bp-lg: 64rem;   // 1024px — 3-column grid
+
+$container-max: 75rem;  // 1200px shell
+$prose-max: 70ch;       // readable line length
+
+$duration-fast: 150ms;
+$radius: 0.375rem;

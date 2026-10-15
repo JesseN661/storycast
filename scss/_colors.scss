@@ -1,0 +1,18 @@
+// Palette — verify every pair before shipping:
+//  text on bg      : >= 4.5:1 (WCAG AA normal text)
+//  text/UI on bg   : >= 3:1   (WCAG AA large text & UI components)
+$color-bg: #fdfdfd;
+$color-surface: #ffffff;
+$color-surface-alt: #f1f3f5;
+$color-text: #1a1a1a;        // ~16.4:1 on $color-bg
+$color-text-muted: #4a4a4a;   // ~8.6:1 on $color-bg
+$color-border: #c9ccd1;      // ~3.1:1 on $color-bg (UI only)
+
+$color-accent: #0b4fd4;      // ~7.4:1 on white — links
+$color-accent-hover: #083aa0;
+$color-focus: #b35c00;       // ~4.7:1 on $color-bg — focus ring
+
+$color-badge-video-bg: #e7f0ff;
+$color-badge-video-fg: #083aa0;
+$color-badge-audio-bg: #e6f4ea;
+$color-badge-audio-fg: #1e4620;
